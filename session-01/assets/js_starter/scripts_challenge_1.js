@@ -9,7 +9,12 @@ let numbers = [1, 2, 3, 4, 5];
 //   return doubled;
 // }
 
-let doubledNumbers = (arr) => arr.map((number) => number * 2);
+let doubleNumbers = function(arr){
+  return arr.map(function(number){
+    return number * 2;
+  });
+};
+
 
 // Call the function with the numbers array
 let result = doubleNumbers(numbers);

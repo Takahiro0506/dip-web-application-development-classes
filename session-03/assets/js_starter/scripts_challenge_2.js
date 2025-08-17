@@ -1,46 +1,82 @@
-// Challenge 2
+// // Challenge 2
+// const userObject = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 30,
+//   isStudent: false,
+//   address: {
+//     street: "123 Main St",
+//     city: "Anytown",
+//     zipCode: "12345",
+//   },
+//   skills: ["JavaScript", "HTML", "CSS"],
+//   socialProfiles: {
+//     twitter: "@johndoe",
+//     linkedIn: "linkedin.com/in/johndoe",
+//   },
+//   isEmployed: true,
+
+//   // Method to change the age property
+//   changeAge(newAge) {
+//     this.age = newAge;
+//   },
+// };
+
 const userObject = {
-  firstName: "John",
-  lastName: "Doe",
-  age: 30,
-  isStudent: false,
+  firstName: "Takahiro",
+  lastName:"Kasuya",
+  age:30,
+  isStudent: true,
   address: {
-    street: "123 Main St",
-    city: "Anytown",
-    zipCode: "12345",
+    street: "88 Waterloo St",
+    City: "TuartHill",
+    ZipCode: "6060",
+
   },
   skills: ["JavaScript", "HTML", "CSS"],
-  socialProfiles: {
-    twitter: "@johndoe",
-    linkedIn: "linkedin.com/in/johndoe",
+  socialProfiles:{
+    instagram: "@taja",
+    linkedIn: "linkedIn.com"
   },
   isEmployed: true,
 
-  // Method to change the age property
-  changeAge(newAge) {
+  changeAge(newAge){
     this.age = newAge;
   },
 };
 
-// Deep clone the userObject three times using the spread operator for shallow cloning
-const clone1 = { ...userObject };
-const clone2 = { ...userObject };
-const clone3 = { ...userObject };
 
-function deepClone(obj) {
-  return JSON.parse(JSON.stringify(obj));
-}
+// // Deep clone the userObject three times using the spread operator for shallow cloning
+// const clone1 = { ...userObject };
+// const clone2 = { ...userObject };
+// const clone3 = { ...userObject };
 
-// // Deep clone the complexObject three times
-// const clone1 = deepClone(complexObject);
-// const clone2 = deepClone(complexObject);
-// const clone3 = deepClone(complexObject);
 
-// Store the cloned objects in an array
+const clone1 = {...userObject };
+const clone2 = {...userObject };
+const clone3 = {...userObject };
+
+
+// // function deepClone(obj) {
+// //   return JSON.parse(JSON.stringify(obj));
+// // }
+
+// // // Deep clone the complexObject three times
+// // const clone1 = deepClone(complexObject);
+// // const clone2 = deepClone(complexObject);
+// // const clone3 = deepClone(complexObject);
+
+// // Store the cloned objects in an array
+// const clonedObjects = [clone1, clone2, clone3];
+
 const clonedObjects = [clone1, clone2, clone3];
 
-// Sort the array of cloned objects based on the 'age' property in ascending order
+// // Sort the array of cloned objects based on the 'age' property in ascending order
+// clonedObjects.sort((a, b) => a.age - b.age);
+
 clonedObjects.sort((a, b) => a.age - b.age);
 
-// Log the sorted array to the console
+// // Log the sorted array to the console
+// console.log(clonedObjects);
+
 console.log(clonedObjects);

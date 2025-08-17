@@ -37,11 +37,11 @@ userObject["fullNamefunction"] = (firstName, lastName) => {
 
 userObject.fullNamefunction(userObject.firstName, userObject.lastName);
 
-// userObject["fullAddressfunction"] = ({ street, city, postCode }) => {
-//   console.log(`${street}, ${city}, ${postCode}`);
-// };
+userObject["fullAddressfunction"] = ({ street, city, postCode }) => {
+  console.log(`${street}, ${city}, ${postCode}`);
+};
 
-// userObject.fullAddressfunction(userObject.address);
+userObject.fullAddressfunction(userObject.address);
 
 userObject["fullAddressfunction"] = function () {
   console.log(
